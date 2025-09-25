@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "397011636702",
+    "project_id": "appmetatribe",
+    "storage_bucket": "appmetatribe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397011636702:android:7ecdacf3b1f7cc53bd4d4f",
+        "android_client_info": {
+          "package_name": "com.metatribe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg4LwG8JiznMshYGrAvbkChd3fCkFO6Fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

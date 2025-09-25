@@ -1,0 +1,16 @@
+
+#MELHORIAS
+
+-1 Cadastro do usuario, avatar usar recurso de recorte de imagem, formatar img
+-2 Injeção de dependencia??
+-3 Organizar Observe: Onssucces, OnLoading, OnError, componente de erro?
+
+
+#BUG
+
+-1 TOOLBAR -> Ajustar o btn para 1 click
+
+#PRÓXIMO PASSO
+
+-1 Cadastro Usuário
+-2 Ajuste do btn toolbar
