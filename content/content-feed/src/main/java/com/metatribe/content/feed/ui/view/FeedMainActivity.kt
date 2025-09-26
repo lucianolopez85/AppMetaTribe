@@ -2,15 +2,11 @@ package com.metatribe.content.feed.ui.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.navigation.NavController
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.metatribe.content.feed.R
-import com.metatribe.content.feed.databinding.ActivityFeedMainBinding
 
 class FeedMainActivity : AppCompatActivity() {
 

@@ -32,7 +32,6 @@ class HomeAdapter : ListAdapter<PostVO, HomeAdapter.PostViewHolder>(PostDiffCall
             Glide.with(itemView.context)
                 .load(base64ToBitmap(post.imagePost))
                 .into(imgPost)
-
         }
     }
 

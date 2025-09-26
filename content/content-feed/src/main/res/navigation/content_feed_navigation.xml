@@ -26,4 +26,11 @@
         tools:layout="@layout/fragment_profile">
     </fragment>
 
+    <fragment
+        android:id="@+id/CommunityFragment"
+        android:name="com.metatribe.content.feed.ui.view.CommunityFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_community">
+    </fragment>
+
 </navigation>

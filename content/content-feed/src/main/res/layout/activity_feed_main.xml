@@ -16,8 +16,11 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btn_navigation_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_gravity="bottom"
-        app:menu="@menu/menu_bottom_nav" />
+        app:menu="@menu/menu_bottom_nav"
+        app:labelVisibilityMode="labeled"
+        style="@style/BottomNavigationView_Compact" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,6 +7,8 @@ import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
+import com.google.gson.Gson
+import java.io.IOException
 
 fun bitmapToBase64(bitmap: Bitmap): String {
 
@@ -30,5 +32,21 @@ fun getBitmapFromUri(context: Context, uri: Uri): Bitmap {
     } else {
         MediaStore.Images.Media.getBitmap(context.contentResolver, uri)
     }
+}
+
+fun <T> getMockByJSON(context: Context, fileName: String, type: Class<T>): T {
+    val jsonString = getJsonDataFromAsset(context, fileName)
+
+    return Gson().fromJson(jsonString, type)
+}
+
+private fun getJsonDataFromAsset(context: Context, fileName: String): String {
+    val jsonString: String
+    try {
+        jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
+    } catch (ioException: IOException) {
+        return ""
+    }
+    return jsonString
 }
 

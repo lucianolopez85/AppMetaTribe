@@ -8,7 +8,6 @@ import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.metatribe.content.feed.data.converter.PostConverter
-import com.metatribe.content.feed.data.source.LocalDataSource
 import com.metatribe.content.feed.domain.vo.PostVO
 
 class HomeViewModel : ViewModel() {
@@ -37,10 +36,10 @@ class HomeViewModel : ViewModel() {
             }
     }
 
-    fun saveNewPost(imagePost: String, description: String, localDataSource: LocalDataSource) {
-        converter = PostConverter()
-        createPostFirebase(converter.convert(imagePost, description, localDataSource))
-    }
+//    fun saveNewPost(imagePost: String, description: String, localDataSource: LocalDataSource) {
+//        converter = PostConverter()
+//        createPostFirebase(converter.convert(imagePost, description, localDataSource))
+//    }
 
     private fun createPostFirebase(post: PostVO) {
         val db = FirebaseFirestore.getInstance()

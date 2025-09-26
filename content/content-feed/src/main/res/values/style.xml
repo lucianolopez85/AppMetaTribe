@@ -4,4 +4,18 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <!-- res/values/styles.xml -->
+    <style name="BottomNavTextCompact" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="BottomNavigationView_Compact" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">20dp</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavTextCompact</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavTextCompact</item>
+    </style>
+
 </resources>
