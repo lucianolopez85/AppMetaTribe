@@ -1,8 +1,11 @@
 package com.metatribe.content.feed.extension
 
 import com.metatribe.content.feed.R
+import com.metatribe.content.feed.data.StatusMeta
 import com.metatribe.content.feed.domain.vo.CarouselItem
 import com.metatribe.content.feed.domain.vo.CommunityItem
+import com.metatribe.content.feed.domain.vo.ProfileMedalVO
+import com.metatribe.content.feed.domain.vo.ProfileMetaVO
 
 val mockData = listOf(
     CommunityItem.CarouselContainer(
@@ -27,3 +30,29 @@ val mockData = listOf(
         )
     )
 )
+
+val metasDoAno = listOf(
+    ProfileMetaVO(
+        status = StatusMeta.DONE,
+        txtItemMeta = "Completar 12 corridas de 5km"
+    ),
+    ProfileMetaVO(
+        status = StatusMeta.DONE,
+        txtItemMeta = "Ganhar 5kg de massa muscular"
+    ),
+    ProfileMetaVO(
+        status = StatusMeta.PENDING,
+        txtItemMeta = "Manter alimentação saudável por 6 meses só salada"
+    ),
+    ProfileMetaVO(
+        status = StatusMeta.CANCELLED,
+        txtItemMeta = "Prova em Jurere"
+    )
+)
+
+
+val medalList = listOf(
+    ProfileMedalVO("hell week", R.drawable.medalha),
+    ProfileMedalVO("Steely discipline", R.drawable.medalha_azul)
+)
+

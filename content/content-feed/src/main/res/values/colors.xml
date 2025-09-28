@@ -8,9 +8,20 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="navigation_bar">#B2000000</color>
+
     <color name="Roxo">#673AB7</color>
     <color name="AV">#00BCD4</color>
     <color name="red">#F44336</color>
     <color name="gray">#F2F0F0</color>
     <color name="btn_enabled">#646464</color>
+
+    <color name="status_done">#4CAF50</color>         <!-- Verde -->
+    <color name="status_pending">#90CAF9</color>      <!-- Azul claro -->
+    <color name="status_in_progress">#2196F3</color>  <!-- Azul -->
+    <color name="status_cancelled">#EF9A9A</color>    <!-- Vermelho claro -->
+    <color name="status_failed">#D32F2F</color>       <!-- Vermelho escuro -->
+    <color name="status_blocked">#FF9800</color>      <!-- Laranja -->
+
+
 </resources>

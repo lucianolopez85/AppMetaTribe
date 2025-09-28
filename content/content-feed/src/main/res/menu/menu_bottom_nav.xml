@@ -12,13 +12,13 @@
         android:title="adicionar" />
 
     <item
-        android:id="@+id/ProfileFragment"
-        android:icon="@drawable/ic_person"
-        android:title="perfil" />
-
-    <item
         android:id="@+id/CommunityFragment"
         android:icon="@drawable/ic_community"
         android:title="Comunidade" />
+
+    <item
+        android:id="@+id/ProfileFragment"
+        android:icon="@drawable/ic_person"
+        android:title="perfil" />
 
 </menu>

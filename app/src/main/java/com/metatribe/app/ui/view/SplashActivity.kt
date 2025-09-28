@@ -2,6 +2,7 @@ package com.metatribe.app.ui.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.google.firebase.FirebaseApp
 import com.metatribe.app.R
 import com.metatribe.app.databinding.ActivitySplashBinding
@@ -21,7 +22,7 @@ class SplashActivity : AppCompatActivity(R.layout.activity_splash) {
         FirebaseApp.initializeApp(this)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
         GlobalScope.launch(Dispatchers.Main) {
             delay(2000)
             startActivity(IntentUtils.createLogonIntent(this@SplashActivity))

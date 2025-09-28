@@ -8,6 +8,15 @@ import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
 import com.google.gson.Gson
+import com.metatribe.content.feed.R
+import com.metatribe.content.feed.data.StatusMeta
+import com.metatribe.content.feed.data.StatusMeta.DONE
+import com.metatribe.content.feed.data.StatusMeta.PENDING
+import com.metatribe.content.feed.data.StatusMeta.IN_PROGRESS
+import com.metatribe.content.feed.data.StatusMeta.CANCELLED
+import com.metatribe.content.feed.data.StatusMeta.FAILED
+import com.metatribe.content.feed.data.StatusMeta.BLOCKED
+import com.metatribe.content.feed.domain.vo.ProfileMetaStatusVO
 import java.io.IOException
 
 fun bitmapToBase64(bitmap: Bitmap): String {
@@ -49,4 +58,16 @@ private fun getJsonDataFromAsset(context: Context, fileName: String): String {
     }
     return jsonString
 }
+
+fun StatusMeta.toMetaStatus(): ProfileMetaStatusVO {
+    return when (this) {
+        DONE -> ProfileMetaStatusVO(this, "✅", R.color.status_done, "Concluído")
+        PENDING -> ProfileMetaStatusVO(this, "⏳", R.color.status_pending, "Pendente")
+        IN_PROGRESS -> ProfileMetaStatusVO(this, "🚀", R.color.status_in_progress, "Em progresso")
+        CANCELLED -> ProfileMetaStatusVO(this, "🚫", R.color.status_cancelled, "Cancelado")
+        FAILED -> ProfileMetaStatusVO(this, "❌", R.color.status_failed, "Falhou")
+        BLOCKED -> ProfileMetaStatusVO(this, "🛑", R.color.status_blocked, "Bloqueado")
+    }
+}
+
 

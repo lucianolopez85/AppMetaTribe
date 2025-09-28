@@ -1,7 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.AppMetaTribe" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+    <!-- Tema base do app -->
+    <style name="Theme.AppMetaTribe" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Cores principais -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Status bar (topo do sistema) -->
+        <item name="android:statusBarColor">@color/black</item>
+
+        <!-- Navigation bar (parte inferior do sistema) -->
+        <item name="android:navigationBarColor">@color/black</item>
+
+        <!-- Ícones e texto da navigation bar em branco -->
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Ícones da status bar em branco -->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Cor de fundo da tela -->
+        <item name="android:windowBackground">@color/black</item>
     </style>
+
 </resources>

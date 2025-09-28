@@ -12,9 +12,7 @@ import com.metatribe.content.feed.R
 import com.metatribe.content.feed.domain.vo.PostVO
 import com.metatribe.content.feed.extension.base64ToBitmap
 
-class HomeAdapter : ListAdapter<PostVO, HomeAdapter.PostViewHolder>(PostDiffCallback()) {
-
-    inner class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class HomeAdapter : ListAdapter<PostVO, HomeAdapter.PostViewHolder>(PostDiffCallback()) {    inner class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val imgAvatar: ImageView = itemView.findViewById(R.id.imgAvatar)
         private val txtName: TextView = itemView.findViewById(R.id.txtName)
         private val imgPost: ImageView = itemView.findViewById(R.id.imgPost)

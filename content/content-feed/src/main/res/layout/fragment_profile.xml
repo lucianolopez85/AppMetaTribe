@@ -3,68 +3,159 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:id="@+id/profile">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@color/purple_500"
+    <ImageView
+        android:id="@+id/btn_settings_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_settings"
+        android:layout_margin="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_profile_top"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/avatar"
+        app:shapeAppearanceOverlay="@style/CircularImageStyle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_profile"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:src="@mipmap/ic_launcher"
-            android:scaleType="centerCrop"
-            app:shapeAppearanceOverlay="@style/CircularImageStyle"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_profile_top"
+        app:layout_constraintTop_toTopOf="@+id/img_profile_top"
+        app:layout_constraintStart_toEndOf="@+id/img_profile_top">
 
         <TextView
             android:id="@+id/txt_name_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome do Usuário"
-            android:textColor="@color/white"
-            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_black_900"
+            android:text="Luciano L. dos Santos"
+            android:textSize="18dp"
             android:textStyle="bold"
-            android:layout_margin="20dp"
-            app:layout_constraintEnd_toEndOf="@+id/img_profile"
-            app:layout_constraintStart_toStartOf="@+id/img_profile"
-            app:layout_constraintTop_toBottomOf="@+id/img_profile" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginStart="2dp"
+            android:textColor="@android:color/white" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/material_dynamic_neutral100"
-        android:orientation="vertical"
-        app:layout_constraintVertical_bias="1"
-        android:padding="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <TextView
-            android:id="@+id/txt_progresso"
-            style="@style/TextAppearance.AppCompat"
-            android:textColor="@color/black"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Objetivos"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="2.5dp"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/txt_location_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_light"
+                android:layout_marginStart="4dp"
+                android:text="Florianópolis SC"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/border_top_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="18dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_profile_medals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:itemCount="2"
-            tools:listitem="@layout/item_objetivo" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txt_title_prifile_medal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Medalhas"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_profile_medals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/item_profile_medal"
+                tools:itemCount="6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_prifile_medal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_profile_metas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/container_profile_medals"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txt_title_profile_meta_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Metas para 2026"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_edit_profile_meta_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_lapis"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_profile_meta_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/item_profile_meta_year"
+                tools:itemCount="4"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_profile_meta_year" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
