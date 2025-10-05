@@ -8,9 +8,9 @@
 
 #BUG
 
--1 TOOLBAR -> Ajustar o btn para 1 click
+-1 Voltar na home, não atualiza a lista
 
 #PRÓXIMO PASSO
 
--1 Cadastro Usuário
--2 Ajuste do btn toolbar
+-1 Cadastro Usuário, authentication
+-2 Ajuste do profile(Settings, editar, grupo)

@@ -20,7 +20,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as? AppCompatActivity)?.supportActionBar?.hide()
-
         setupObserver()
     }
 
@@ -34,11 +33,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         setupRecyclerView()
         viewModel.posts.observe(viewLifecycleOwner) { postList ->
             adapter.submitList(postList)
-            binding.recyclerView.adapter = adapter
         }
         viewModel.fetchPosts()
     }
-
 }
 
 

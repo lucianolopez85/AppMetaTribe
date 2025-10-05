@@ -7,7 +7,7 @@
         android:title="home" />
 
     <item
-        android:id="@+id/CreatePostFragment"
+        android:id="@+id/menu_add_photo"
         android:icon="@drawable/ic_add"
         android:title="adicionar" />
 

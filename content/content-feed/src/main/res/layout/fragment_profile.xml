@@ -23,6 +23,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/avatar"
+        android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/CircularImageStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -41,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_black_900"
-            android:text="Luciano L. dos Santos"
+            android:text="Joãozinho"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_marginStart="2dp"
@@ -64,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_light"
                 android:layout_marginStart="4dp"
-                android:text="Florianópolis SC"
+                android:text="Nárnia"
                 android:textColor="@android:color/white" />
         </LinearLayout>
     </LinearLayout>

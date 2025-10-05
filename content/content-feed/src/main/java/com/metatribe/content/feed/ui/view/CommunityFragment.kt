@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.metatribe.content.feed.R
 import com.metatribe.content.feed.databinding.FragmentCommunityBinding
-import com.metatribe.content.feed.extension.mockData
+import com.metatribe.content.feed.extension.mockCommunityList
 import com.metatribe.content.feed.ui.adapter.CommunityAdapter
 
 class CommunityFragment: Fragment(R.layout.fragment_community) {
@@ -20,7 +20,7 @@ class CommunityFragment: Fragment(R.layout.fragment_community) {
 
         binding.recyclerViewCommunity.layoutManager = LinearLayoutManager(requireContext())
 
-        adapter = CommunityAdapter(mockData) { item ->
+        adapter = CommunityAdapter(mockCommunityList) { item ->
             Toast.makeText(requireContext(), "Clicou em: ${item.title}", Toast.LENGTH_SHORT).show()
         }
 

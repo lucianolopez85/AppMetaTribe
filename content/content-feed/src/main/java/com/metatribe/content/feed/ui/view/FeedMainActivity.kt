@@ -1,6 +1,8 @@
 package com.metatribe.content.feed.ui.view
 
+import android.net.Uri
 import android.os.Bundle
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -13,6 +15,13 @@ class FeedMainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var bottomNavigationView: BottomNavigationView
 
+    private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+        uri?.let {
+            val dialog = CreatePostFragment.newInstance(it.toString())
+            dialog.show(supportFragmentManager, "CreatePostDialog")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed_main)
@@ -23,7 +32,21 @@ class FeedMainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         bottomNavigationView = findViewById(R.id.btn_navigation_bar)
 
-        NavigationUI.setupWithNavController(bottomNavigationView, navController)
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu_add_photo -> {
+                    pickImageFromGallery()
+                    true
+                }
+                else -> {
+                    NavigationUI.onNavDestinationSelected(item, navController)
+                    true
+                }
+            }
+        }
+    }
 
+    private fun pickImageFromGallery() {
+        pickImageLauncher.launch("image/*")
     }
 }

@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.metatribe.content.feed.R
 import com.metatribe.content.feed.domain.vo.ProfileMedalVO
 
-class DataMedalAdapter(
+class ProfileMedalAdapter(
     private val items: List<ProfileMedalVO>
-) : RecyclerView.Adapter<DataMedalAdapter.MedalViewHolder>() {
+) : RecyclerView.Adapter<ProfileMedalAdapter.MedalViewHolder>() {
 
     inner class MedalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgMedal: ImageView = itemView.findViewById(R.id.img_profile_medal)
